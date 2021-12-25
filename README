@@ -1,3 +1,18 @@
+In english :
+this is a dictionnary fill by FR.txt.
+There are 3 differents types of dictionnary : radix Tree, prefixe tree, and a hashtable.
+To compile then execute the prefixe tree : 
+make test/prefixe 
+make prefexe
+
+To compile then execute the radix tree : 
+make test/radix
+make radexe
+
+To compile then execute the hastable :
+make test/hashtable
+make hashexe
+
 Ce fichier explique comment compiler les fichiers le dossier tp_algo de Baptiste GUYOT et Gabriel LEVY.
 
 Pour compiler la methode prefixe : il faut se placer dans le repertoire tp_algo et faire : make test/prefixe.
