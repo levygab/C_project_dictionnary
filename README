@@ -1,0 +1,32 @@
+Ce fichier explique comment compiler les fichiers le dossier tp_algo de Baptiste GUYOT et Gabriel LEVY.
+
+Pour compiler la methode prefixe : il faut se placer dans le repertoire tp_algo et faire : make test/prefixe.
+pour lancer l'executable de la methode prefixe, il faut faire make prefexe.
+
+Pour compiler la methode radix : il faut se placer dans le repertoire tp_algo et faire : make test/radix.
+pour lancer l'executable de la methode radix, il faut faire make radexe.
+
+Pour compiler la table de hachage : il faut se placer dans le repertoire tp_algo et faire : make test/hashtable.
+pour lancer l'executable de la table de hachage, il faut faire make hashexe.
+
+
+Attention, j'ai remaque qu'avec le makefile, l'utilisation de la memoire n'est pas la meme que lorsqu'on compilait les fichiers depuis le repertoire.
+De plus, une erreur apparait lorsque l'on fait hashexe
+
+S'il y a un probleme, ou si vous voulez verifier l'utilisation de la memoire.
+Il faut modifier les chemins des fihciers a lire dans les fichiers .c ; dans le but de pouvoir compiler depuis les repertoires
+Il faut donc aller dans src/arbre_prefixe/prefixe.c, src/radix/radix.c, src/hashtable/table.c, et modifier les lignes (dans le main)
+
+  f_texte = fopen("a_la_recherche_du_temps_perdu.txt", "rt");
+  f_dictio = fopen("FR.txt", "rt");
+
+qu'il faut remplacer par :
+
+  f_texte = fopen("../../a_la_recherche_du_temps_perdu.txt", "rt");
+  f_dictio = fopen("../../FR.txt", "rt");
+
+Vous pouvez ensuite compiler a=en vous placant dans les repertoire   x   avec la commande y :
+
+  x = src/arbre_prefixe      y = gcc prefixe.c -o prefixe   ;  puis ./prefixe
+  x = src/radix      y = gcc radix.c -o radix   ;  puis ./radix
+  x = src/hashtable      y = gcc table.c -o table   ;  puis ./table  
